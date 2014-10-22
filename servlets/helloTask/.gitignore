@@ -1,7 +1,6 @@
 /build/
 /bin/
-/.settings/
-/.project
-/.classpath
-/address_book.json
 /.gradle/
+/.settings/
+/.classpath
+/.project

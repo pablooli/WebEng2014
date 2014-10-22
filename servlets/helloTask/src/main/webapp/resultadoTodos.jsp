@@ -1,0 +1,58 @@
+<%@ page import="servlets.hello.MostrarTodos"%>
+<%@ page import="servlets.hello.Tarea"%>
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="java.util.Iterator"%>
+<html>
+<header>
+<link href='./css/web_peliculas.css' type=text/css rel=stylesheet>
+</header>
+<body>
+		<div id="contenedora">
+			<div ">
+				<table border ="2">
+			<%	
+				ArrayList<Tarea> resultado = (ArrayList<Tarea>)request.getAttribute("listaDatos");
+				for(int i=0;i<resultado.size();i++){
+			%>
+				<tr>		
+					<td width="300px"> Task: 
+					  <%=resultado.get(i).getTask()%>
+						
+					</td>
+
+	
+									
+					<td width="300px"> Context: 
+					  <%=resultado.get(i).getContext()%>
+						
+					</td>
+
+
+										
+					<td width="300px"> Proyect: 
+					  <%=resultado.get(i).getProyect()%>
+						
+					</td>
+
+										
+					<td width="300px"> Priority: 
+					  <%=resultado.get(i).getPriority()%>
+						
+					</td>
+
+				</tr>
+				
+			  <%}%>	
+			<form id="formulario" action="./TareaServlet" name="form_registro" method="get">
+			<tr>
+			<td colspan=4>
+							<center>
+								<input type="submit" value="Volver"/>
+							</center>
+						</td>	</tr> </form>				
+			</table>
+					
+			</div>
+		</div>
+</body>
+</html>

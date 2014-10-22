@@ -1,0 +1,275 @@
+﻿*{
+	margin: 0;
+	padding: 0;	
+}
+
+body
+{
+	background-image: url(../images/cine.jpg);
+	background-repeat: repeat;
+	background-position:center;
+	padding-bottom: 22px;
+}
+
+i{
+	color: red;
+}
+
+button, input[type='submit']{
+	padding: 5px;
+}
+
+#header{
+	margin-top: -20px;
+	width: 100%;
+	min-width: 1000px;
+	height: 121px;
+}
+
+#banner-width{
+	width: 100%;
+	height: 100px;
+	background: #356BB5;
+}
+
+#banner{
+	padding-top: 31px;
+	width: 1000px;
+	height: 100px;
+	margin: 0 auto;
+	min-width: 1030px;
+}
+
+#menu{
+	background: url("../images/barra_menu.jpg") repeat-x scroll 0 0 transparent;
+	width: 100%;
+	height: 21px;
+	min-width: 1030px;
+}
+
+#menu-container{
+	width: 1028px;
+	height: 21px;
+	margin: 0 auto;
+	border-left: 1px solid #CCCDCE;
+	border-right: 1px solid #CCCDCE;
+}
+
+#menu-list{
+	list-style-type: none;
+}
+
+#menu-list li *{
+	cursor: pointer;
+	color: #4D4D4D;
+	display: block;
+	float: left;
+	border-right: 1px solid #CCCDCE;
+	padding: 2px 8px 3px;
+	text-transform: uppercase;
+}
+
+#menu-list li{
+	*cursor: pointer;
+	*color: #4D4D4D;
+	*display: block;
+	*float: left;
+	*border-right: 1px solid #CCCDCE;
+	*padding: 2px 8px 3px;
+	*text-transform: uppercase;
+}
+
+#menu-list li *{
+	*border-right: none;
+	padding: 2px 8px 3px;
+	text-transform: uppercase;
+}
+
+#menu-list li a{
+	color: none;
+    font-family: arial;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+#menu-list li:hover, #menu-list li a:hover{
+	background-color: lightblue;
+	color: white;
+}
+
+.menu-derecha{
+	float: right;
+}
+
+#footer{
+	color: white;
+	width: 100%;
+	background: #356BB5;
+	text-align: center;
+	position: fixed;
+	bottom: 0px;
+	padding: 2px;
+	font-size: 12px;
+	height: 18px;
+}
+
+#footer-link{
+	color: lightBlue;
+}
+
+#body{
+	padding: 15px;
+	width: 1000px;
+	background-color: lightblue;
+}
+
+#busqueda_peliculas, #busqueda_series{
+	padding: 15px;
+	width: 800px;
+	background-color: lightgrey;
+}
+
+#combo_genero{
+	margin-right: 20px;
+	width: 100px;
+}
+
+#combo_peliculas, #combo_series{
+	width: 220px;
+}
+
+#lista_ultimas{
+	margin-bottom: 15px;
+}
+
+#lista_ultimas .imagenes{
+	padding: 15px;
+	width: 227px;
+	text-align: center;
+}
+
+#lista_ultimas .imagenes:hover{
+	background-color: white;
+}
+
+#lista_ultimas .imagenes a{
+	color: black;
+    font-family: arial;
+	font-weight: bold;
+    text-decoration: none;
+}
+
+#formulario table tr td{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#btn_aceptar{
+	padding: 5px;
+}
+
+#info_peli, #info_serie{
+	padding: 15px;
+	width: 850px;
+	background-color: white;
+}
+
+#h_comentarios
+{
+	color:white;
+	text-align:center;
+}
+
+#info_imagen{
+	text-align: center;
+	width: 197px;
+	height: 600px; /* Ancho y alto fijo */
+	overflow: hidden; /* Se oculta el contenido desbordado */
+	background-color: white;
+	border: 0px;
+	position: relative;
+	float: left;
+
+}
+
+#info_tabla{
+	width: 550px;
+	height: 600px; /* Ancho y alto fijo */
+	overflow: hidden; /* Se oculta el contenido desbordado */
+	background-color: white;
+	border: 0px;
+	position: relative;
+	float: right;
+	
+}
+
+#coment_peli, #coment_serie, #coment_usuario{
+	width: 830px;
+	padding-top: 40px;
+	overflow: hidden;
+	border: 0px;
+	position: relative;
+	float: down;
+}
+
+.filaPelicula{
+	color: black;
+	text-decoration: none;
+}
+
+.filaPelicula div{
+	width: 100%;
+}
+
+.filaPelicula div:hover{
+	background: #FFDDDD;
+}
+
+#botonesPeliculas{
+	height: 40px;
+	margin-top: 15px;
+}
+
+#botonesPeliculas form{
+	float: right;
+}
+
+#tabla_series{
+	width: 100%;
+	height: 100%; /* Ancho y alto fijo */
+}
+
+#tabla_series tr{
+	margin-top: 10px;
+}
+
+#tabla_comentarios
+{
+	font-weight: bold;
+	text-align:center;
+	opacity: 1;
+}
+
+#espacio_comentarios{
+	padding-top:5px;
+}
+
+#contenedora {
+    width: 900px;
+	position: relative;
+}
+
+#contenedora em {
+	background: url(../images/validacion/globo.png) no-repeat;
+	margin-top: -53px;
+	margin-left: 10px;
+	font-size: 15px;
+	width: 190px;
+	height: 67px;
+	position: absolute;
+	text-align: center;
+	padding: 17px 35px;
+	font-style: normal;
+	z-index: 2;
+	display: none;
+}
