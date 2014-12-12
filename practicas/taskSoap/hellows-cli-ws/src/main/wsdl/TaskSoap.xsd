@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.8 svn-revision#13980. --><xs:schema xmlns:tns="http://taskws.bigws/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://taskws.bigws/">
+
+<xs:element name="addTask" type="tns:addTask"/>
+
+<xs:element name="addTaskResponse" type="tns:addTaskResponse"/>
+
+<xs:element name="deleteTask" type="tns:deleteTask"/>
+
+<xs:element name="deleteTaskResponse" type="tns:deleteTaskResponse"/>
+
+<xs:element name="viewTask" type="tns:viewTask"/>
+
+<xs:element name="viewTaskResponse" type="tns:viewTaskResponse"/>
+
+<xs:complexType name="viewTask">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="viewTaskResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tarea" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tarea">
+<xs:sequence>
+<xs:element name="context" type="xs:string" minOccurs="0"/>
+<xs:element name="priority" type="xs:int"/>
+<xs:element name="proyect" type="xs:string" minOccurs="0"/>
+<xs:element name="task" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteTask">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteTaskResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="addTask">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+<xs:element name="arg2" type="xs:string" minOccurs="0"/>
+<xs:element name="arg3" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addTaskResponse">
+<xs:sequence/>
+</xs:complexType>
+</xs:schema>
