@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Task App Web</title>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<div class="header">
+		<input type="text" id="searchKey"/>
+		<button id="btnSearch">Search</button>
+		<button id="btnAdd">New Task</button>
+	</div>
+	<div class="leftArea">
+		<ul id="taskList"></ul>
+	</div>
+<form id="taskForm">
+	<div class="mainArea">
+		<label>Id:</label>
+		<input id="taskId" name="id" type="text" disabled />
+		<p>
+		<label>Task:</label>
+		<input type="text" id="task" name="task"/>
+		<p>
+		<label>Context:</label>	
+		<input type="text" id="context" name="context"/>
+		<p>
+		<label>Proyect:</label>
+		<input type="text" id="proyect" name="proyect"/>
+		<p>
+		<label>Priority:</label>
+		<input type="text" id="priority" name="priority"/>
+		<p>
+		<button id="btnSave">Save</button>
+		<button id="btnDelete">Delete</button>
+	</div>
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/task.js"></script>
+</body>
+</html>
