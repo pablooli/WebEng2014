@@ -1,0 +1,74 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page import="javax.servlet.http.HttpServletRequest" %>
+<%
+String task = "",  context = "", proyect = "" , priority= "" , buscarPorTarea="";
+
+if(request != null && request.getMethod().equals("GET")){
+	task = request.getParameter("task")!=null ? request.getParameter("task") : "";
+
+	context = request.getParameter("context")!=null ? request.getParameter("context") : "";
+	
+	proyect = request.getParameter("proyect")!=null ? request.getParameter("proyect") : "";
+	
+	priority = request.getParameter("priority")!=null ? request.getParameter("priority") : "";
+	
+	
+}
+%>
+<html>
+<header>
+<link href='./css/web_peliculas.css' type=text/css rel=stylesheet>
+</header>
+<body>
+		<h1>Registro de tarea</h1>
+		<div id="contenedora">
+			<form id="formulario" action="./TareaServlet" name="form_registro" method="get">
+				<table>
+					<tr>
+						<td>Task:<i>*</i></td>
+						<td width="40px"><input type="text" name="task" size="50" maxlength=50 tabindex="1"  value="<%=task%>"/></td>							
+					</tr>
+					<tr>
+						<td>Context:<i>*</i></td>
+						<td width="40px"><input type="text" name="context" size="50" maxlength=50 tabindex="2" value="<%=context%>"/></td>
+					</tr>
+					<tr>
+						<td>Proyect:<i>*</i></td>
+						<td width="40px"><input type="text" name="proyect" size="50" maxlength=5 tabindex="3" value="<%=proyect%>"/></td>
+					</tr>
+					<tr>
+						<td>Priority:<i>*</i></td>
+						<td width="40px"><input type="text" name="priority" size="50" maxlength=5 tabindex="4" value="<%=priority%>"/></td>
+					</tr>
+					
+					<tr>
+						<td colspan=2>
+							<center>
+								<input type="submit" value="Aceptar"/>
+							</center>
+						</td>
+					</tr>
+				</table>
+			</form>
+
+<form id="formulario" action="./MostrarResultados" name="form_registro" method="get">
+				<table>
+					<tr>
+						<td>BusquedaPorTarea / vacio para mostrar todos:<i>*</i></td>
+						<td width="40px"><input type="text" name="buscarPorTarea" size="50" maxlength=20 tabindex="1"  value="<%=buscarPorTarea%>"/></td>							
+					</tr>
+					
+					<tr>
+						<td colspan=2>
+							<center>
+								<input type="submit" value="Aceptar"/>
+							</center>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+</body>
+</html>

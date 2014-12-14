@@ -1,6 +1,7 @@
 # "Big" web services
 
 Basic Examples:
-* [Hello task! server (standalone)](hellows-jar)
-* [Hello task! client](hellows-cli-ws)
+* [Hello world! server (web application)](hellows-war)
+* [Hello world! server (standalone)](hellows-jar)
+* [Hello world! client](hellows-cli-ws)
 
